@@ -35,6 +35,11 @@ public class Building implements Serializable {
 		this.blocks = blocks;
 	}
 
+	public void addBlock(Block block) {
+
+		this.blocks.add(block);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -91,4 +96,5 @@ public class Building implements Serializable {
 		}
 		return workingstations;
 	}
+
 }

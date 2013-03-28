@@ -9,20 +9,20 @@ import com.kism3t.seatallocation.optimizer.model.facility.Workingstation;
 import com.kism3t.seatallocation.optimizer.model.person.group.Group;
 
 @PlanningEntity
-public abstract class Employee {
+public class Employee {
 
-	private String id;
+	private long id;
 	private String name;
 	private String surname;
 	private Group group;
 
 	private Workingstation workingstation;
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -61,11 +61,18 @@ public abstract class Employee {
 	}
 
 	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", surname=" + surname
+				+ ", group=" + group + ", workingstation=" + workingstation
+				+ "]";
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((group == null) ? 0 : group.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
 		result = prime * result
@@ -92,11 +99,7 @@ public abstract class Employee {
 		} else if (!group.equals(other.group)) {
 			return false;
 		}
-		if (id == null) {
-			if (other.id != null) {
-				return false;
-			}
-		} else if (!id.equals(other.id)) {
+		if (id != other.id) {
 			return false;
 		}
 		if (name == null) {
@@ -123,10 +126,14 @@ public abstract class Employee {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", surname=" + surname
-				+ ", group=" + group + ", workingstation=" + workingstation
-				+ "]";
+	public Employee clone() {
+
+		Employee clone = new Employee();
+		clone.id = this.id;
+		clone.name = this.name;
+		clone.surname = this.surname;
+		clone.group = this.group;
+		clone.workingstation = this.workingstation;
+		return clone;
 	}
 }

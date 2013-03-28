@@ -47,6 +47,10 @@ public class Room implements Serializable {
 		this.workingstations = workingstations;
 	}
 
+	public void addWorkinstation(Workingstation workingstation) {
+		this.workingstations.add(workingstation);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

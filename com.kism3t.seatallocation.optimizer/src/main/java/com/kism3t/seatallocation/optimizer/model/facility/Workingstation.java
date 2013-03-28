@@ -9,6 +9,15 @@ public class Workingstation implements Serializable {
 	private long id;
 	private String name;
 
+	public Workingstation() {
+	}
+
+	public Workingstation(long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
 	public long getId() {
 		return id;
 	}

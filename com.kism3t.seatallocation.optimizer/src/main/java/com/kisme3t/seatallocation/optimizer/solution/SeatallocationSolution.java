@@ -40,7 +40,9 @@ public class SeatallocationSolution implements Solution<HardAndSoftScore> {
 		clone.buildings = buildings;
 
 		// Planning Facts need to be cloned
-
+		for (Employee employee : employees) {
+			clone.employees.add(employee.clone());
+		}
 		return clone;
 	}
 

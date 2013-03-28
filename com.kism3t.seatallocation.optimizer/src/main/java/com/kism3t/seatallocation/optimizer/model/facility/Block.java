@@ -36,6 +36,10 @@ public class Block implements Serializable {
 		this.rooms = rooms;
 	}
 
+	public void addRoom(Room room) {
+		this.rooms.add(room);
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
