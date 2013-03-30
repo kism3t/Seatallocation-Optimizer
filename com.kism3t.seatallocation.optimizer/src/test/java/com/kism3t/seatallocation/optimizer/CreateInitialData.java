@@ -22,7 +22,7 @@ public class CreateInitialData {
 	private static int roomPosition = 0;
 	private static int workingstationPosition = 0;
 
-	public static List<Building> craeteSampleOffice() {
+	public static InitialDataContainer craeteSampleOffice() {
 
 		List<Building> buildings = new ArrayList<Building>();
 		// Create Building
@@ -45,7 +45,10 @@ public class CreateInitialData {
 		}
 
 		buildings.add(building);
-		return buildings;
+
+		InitialDataContainer initialDataContainer = new InitialDataContainer(
+				buildings, sampleEmployees);
+		return initialDataContainer;
 
 	}
 

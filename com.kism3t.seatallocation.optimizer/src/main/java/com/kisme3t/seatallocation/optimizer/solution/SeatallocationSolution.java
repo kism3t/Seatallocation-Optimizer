@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import org.drools.planner.api.domain.solution.PlanningEntityCollectionProperty;
 import org.drools.planner.core.score.buildin.hardandsoft.HardAndSoftScore;
 import org.drools.planner.core.solution.Solution;
 
@@ -21,6 +22,23 @@ public class SeatallocationSolution implements Solution<HardAndSoftScore> {
 
 	// Score
 	HardAndSoftScore score;
+
+	public List<Building> getBuildings() {
+		return buildings;
+	}
+
+	public void setBuildings(List<Building> buildings) {
+		this.buildings = buildings;
+	}
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
+
+	@PlanningEntityCollectionProperty
+	public Collection<Employee> getEmployees() {
+		return employees;
+	}
 
 	public List<Workingstation> getWorkingstations() {
 

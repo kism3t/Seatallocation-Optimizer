@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <!-- Define the model -->
+  <solutionClass>com.kisme3t.seatallocation.optimizer.solution.SeatallocationSolution</solutionClass>
+  <planningEntityClass>com.kism3t.seatallocation.optimizer.model.persons.Employee</planningEntityClass>
+
+  <!-- Define the score function -->
+  <scoreDirectorFactory>
+    <scoreDefinitionType>SIMPLE</scoreDefinitionType>
+    <scoreDrl>/com/kism3t/seatallocation/optimizer/scoring/SeatallocationOptimizerRules.drl</scoreDrl>
+  </scoreDirectorFactory>
+
+  <!-- Configure the optimization algorithm(s) -->
+  <termination>
+    <scoreAttained>0</scoreAttained>
+  </termination>
+  <constructionHeuristic>
+    <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
+    <constructionHeuristicPickEarlyType>FIRST_LAST_STEP_SCORE_EQUAL_OR_IMPROVING</constructionHeuristicPickEarlyType>
+  </constructionHeuristic>
+  <localSearch>
+    <changeMoveSelector>
+      <selectionOrder>ORIGINAL</selectionOrder>
+    </changeMoveSelector>
+    <!-- changeMoveSelector is the generic form of RowChangeMoveFactory: -->
+    <!--<moveListFactory>-->
+      <!--<moveListFactoryClass>org.drools.planner.examples.nqueens.solver.move.factory.RowChangeMoveFactory</moveListFactoryClass>-->
+    <!--</moveListFactory>-->
+    <acceptor>
+      <planningEntityTabuSize>5</planningEntityTabuSize>
+    </acceptor>
+    <forager>
+      <!-- Real world problems require to use of <minimalAcceptedSelection> -->
+    </forager>
+  </localSearch>
+</solver>
