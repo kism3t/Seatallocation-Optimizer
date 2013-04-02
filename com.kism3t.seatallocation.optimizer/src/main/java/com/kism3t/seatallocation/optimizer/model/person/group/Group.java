@@ -1,11 +1,16 @@
 package com.kism3t.seatallocation.optimizer.model.person.group;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import com.kism3t.seatallocation.optimizer.model.persons.Employee;
 
 @Entity(name = "Group")
 public class Group {
@@ -17,6 +22,8 @@ public class Group {
 
 	@Column(name = "name")
 	private String name;
+
+	private List<Employee> employees = new ArrayList<Employee>();
 
 	@Enumerated(EnumType.ORDINAL)
 	private GroupStatus groupStatus;
@@ -43,6 +50,24 @@ public class Group {
 
 	public void setGroupStatus(GroupStatus groupStatus) {
 		this.groupStatus = groupStatus;
+	}
+
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
+
+	public int groupSize() {
+
+		return employees.size();
+	}
+
+	public void addEmployee(Employee employee) {
+
+		this.employees.add(employee);
 	}
 
 	@Override

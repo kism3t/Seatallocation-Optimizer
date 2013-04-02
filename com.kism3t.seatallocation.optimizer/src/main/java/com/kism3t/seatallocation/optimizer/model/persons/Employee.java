@@ -8,7 +8,7 @@ import org.drools.planner.api.domain.variable.ValueRangeType;
 import com.kism3t.seatallocation.optimizer.model.facility.Workingstation;
 import com.kism3t.seatallocation.optimizer.model.person.group.Group;
 
-@PlanningEntity
+@PlanningEntity(difficultyComparatorClass = EmployeeDifficultyComparator.class)
 public class Employee {
 
 	private long id;

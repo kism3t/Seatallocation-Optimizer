@@ -1,0 +1,45 @@
+package com.kism3t.seatallocation.optimizer.score;
+    dialect "java"
+    
+import org.drools.planner.core.score.buildin.hardandsoft.HardAndSoftScoreHolder;
+import org.drools.planner.core.score.constraint.UnweightedConstraintOccurrence;
+import org.drools.planner.core.score.constraint.ConstraintType;
+
+import com.kism3t.seatallocation.optimizer.model.persons.Employee;
+import com.kism3t.seatallocation.optimizer.model.person.group.GroupStatus;
+global HardAndSoftScoreHolder scoreHolder;
+
+// ############################################################################
+// Hard constraints
+// ############################################################################
+/**
+ * The Employee has no Workingstation is a hard constraint, 
+ * as an employee has to have a workingstation. 
+**/
+rule "employee_has_no_workingstation"
+	when
+		$employee : Employee (workingstation == null)
+	then
+		insertLogical(new UnweightedConstraintOccurrence("employee_has_no_workingstation", 
+			ConstraintType.NEGATIVE_HARD, 
+			$employee));
+end
+
+// ############################################################################
+// Soft constraints
+// ############################################################################
+
+/**
+ * Two Employee not in the same Room one negative Soft score. 
+**/
+rule "employees_of_same_project_not_in_same_room"
+	when
+		$employee1 :  Employee($id : id, $group1 : group, $status1 : GroupStatus.ONGOING_PROJECT.equals(group.getGroupStatus()))
+		$employee2 :  Employee(id > $id, !($group1.equals(group)), $status2 : GroupStatus.ONGOING_PROJECT.equals(group.getGroupStatus()))
+	then
+		insertLogical(new UnweightedConstraintOccurrence("employees_of_same_project_not_in_same_room", 
+			ConstraintType.NEGATIVE_SOFT,
+			$employee1,
+			$employee2));
+end
+

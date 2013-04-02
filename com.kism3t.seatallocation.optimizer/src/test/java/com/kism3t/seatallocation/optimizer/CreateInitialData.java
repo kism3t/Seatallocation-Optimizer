@@ -125,26 +125,37 @@ public class CreateInitialData {
 			// No Project Employees
 			if (i < 10) {
 				employess.get(i).setGroup(noProject);
+				noProject.addEmployee(employess.get(i));
 			} else if (i < 12) {
 				employess.get(i).setGroup(projectA);
+				projectA.addEmployee(employess.get(i));
 			} else if (i < 14) {
 				employess.get(i).setGroup(projectB);
+				projectB.addEmployee(employess.get(i));
 			} else if (i < 17) {
 				employess.get(i).setGroup(projectC);
+				projectC.addEmployee(employess.get(i));
 			} else if (i < 20) {
 				employess.get(i).setGroup(projectD);
+				projectD.addEmployee(employess.get(i));
 			} else if (i < 23) {
 				employess.get(i).setGroup(projectE);
+				projectE.addEmployee(employess.get(i));
 			} else if (i < 27) {
 				employess.get(i).setGroup(projectF);
+				projectF.addEmployee(employess.get(i));
 			} else if (i < 31) {
 				employess.get(i).setGroup(projectG);
+				projectG.addEmployee(employess.get(i));
 			} else if (i < 35) {
 				employess.get(i).setGroup(projectH);
+				projectH.addEmployee(employess.get(i));
 			} else if (i < 41) {
 				employess.get(i).setGroup(projectI);
+				projectI.addEmployee(employess.get(i));
 			} else if (i < 47) {
 				employess.get(i).setGroup(projectJ);
+				projectJ.addEmployee(employess.get(i));
 			}
 		}
 		return employess;
