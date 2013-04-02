@@ -1,66 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="src" path="src/test/java"/>
-	<classpathentry kind="src" path="src/test/resources"/>
-	<classpathentry kind="src" path="src/main/hibernatemapping"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/antlr-2.7.7.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/antlr-3.3.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/antlr-runtime-3.3.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/bcmail-jdk14-138.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/bcprov-jdk14-138.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/commons-io-1.4.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/commons-lang-2.4.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/drools-compiler-5.5.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/drools-core-5.5.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/drools-planner-benchmark-5.5.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/drools-planner-core-5.5.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/ecj-3.5.1.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/freemarker-2.3.19.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/itext-2.1.2.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/jcommon-1.0.17.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/jfreechart-1.0.14.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/knowledge-api-5.5.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/knowledge-internal-api-5.5.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/logback-classic-1.0.0.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/logback-core-1.0.0.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/mvel2-2.1.3.Final.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/slf4j-api-1.6.4.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/stringtemplate-3.2.1.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/xml-apis-1.3.04.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/xmlpull-1.1.3.1.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/xpp3_min-1.1.4c.jar"/>
-	<classpathentry kind="lib" path="lib/droolsplanner5.5/xstream-1.4.1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/envers/hibernate-envers-4.2.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/jpa/hibernate-entitymanager-4.2.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/c3p0/c3p0-0.9.1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/c3p0/hibernate-c3p0-4.2.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/ehcache/ehcache-core-2.4.3.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/ehcache/hibernate-ehcache-4.2.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/ehcache/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/hibernate-infinispan-4.2.0.Final-tests.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/hibernate-infinispan-4.2.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/infinispan-core-5.2.0.Beta3.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/jboss-logging-3.1.1.GA.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/jboss-marshalling-1.3.15.GA.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/jboss-marshalling-river-1.3.15.GA.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/jgroups-3.2.0.CR1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/rhq-pluginAnnotations-3.0.4.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/stax2-api-3.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/staxmapper-1.1.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/infinispan/woodstox-core-asl-4.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/proxool/hibernate-proxool-4.2.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/optional/proxool/proxool-0.8.3.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/required/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/required/hibernate-commons-annotations-4.0.1.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/required/hibernate-core-4.2.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/required/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/required/javassist-3.15.0-GA.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/required/jboss-logging-3.1.0.GA.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate4/required/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/junit/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="lib/junit/junit-4.11.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry including="**/*.java" kind="src" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

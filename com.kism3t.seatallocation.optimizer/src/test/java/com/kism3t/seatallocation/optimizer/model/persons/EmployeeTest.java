@@ -1,6 +1,7 @@
 package com.kism3t.seatallocation.optimizer.model.persons;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.kism3t.seatallocation.optimizer.model.facility.Workingstation;
@@ -10,6 +11,7 @@ import com.kism3t.seatallocation.optimizer.model.person.group.GroupStatus;
 public class EmployeeTest {
 
 	@Test
+	@Ignore
 	public void cloneTest() throws Exception {
 
 		Group group = new Group();
